@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+
+<body>
+    <script>
+        var prviPodatak = prompt("Unesite prvi broj");
+        var operacija = prompt("Unestite +, - , * ili / za zeljenu matematicku operaciju: ")
+        var drugiPodatak = prompt("Unesite drugi broj: ");
+        let rezultat = 0;
+
+        switch (operacija) {
+            case "+":
+                rezultat = parseInt(prviPodatak) + parseInt(drugiPodatak)
+                break;
+            case "-":
+                rezultat = parseInt(prviPodatak) - parseInt(drugiPodatak)
+                break;
+            case "*":
+                rezultat = parseInt(prviPodatak) * parseInt(drugiPodatak)
+                break;
+            case "/":
+                if (parseInt(prviPodatak) || (parseInt(drugiPodatak)) == 0) {
+                    rezultat = "Uneti broj ne moze biti 0. Hvala"
+                } else {
+                    rezultat = parseInt(prviPodatak) / parseInt(drugiPodatak)
+                }
+                break;
+
+            default:
+                rezultat = "Ne postoji vrednost ili operacija koju ste uneli."
+        }
+
+        alert("Rezultat je: " + rezultat)
+    </script>
+</body>
+
+</html>
